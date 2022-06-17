@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/svg-with-js.min.css"  />
+</head>
+<body>
+  <div class="container">
+    <form id="jsForm" method="post"> 
+      <!-- <i class="fas fa-paper-plane"></i> -->
+
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name"  id="contact-name" onkeyup="validateName()" >
+        <span id="name-err"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Phone No.</label>
+        <input type="tel" placeholder="123 456 7890" id="phone-num" onkeyup="validateMobile()">
+        <span id="phone-err"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Email Id</label>
+        <input type="email" placeholder="Enter Email" id="email-id" onkeyup="validateEmail()" >
+        <span id="email-err"></span>
+      </div>   
+
+      <div class="input-group">
+        <label>Your Message</label>
+        <textarea rows="5" placeholder="Enter your message" id="message" onkeyup="validateMessage()" ></textarea>
+        <span id="message-err"></span>
+      </div>
+
+    <button id="submit">Submit</button>
+    <span id="err"></span>
+  </form>
+  </div>
+   
+  <script src="script.js" crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("#submit").click(function(){
+        $.ajax({
+          url: "",
+          method:"POST"
+          data: data.serialze 
+        })
+      });
+    });     
+  </script>
+  
+</body>
+</html>
